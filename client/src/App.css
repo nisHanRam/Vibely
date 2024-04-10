@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* Define your variables */
+:root {
+  --xs: clamp(0.6076rem, 0.5743rem + 0.1667vi, 0.7035rem);
+  --s: clamp(0.7292rem, 0.6566rem + 0.3627vi, 0.9377rem);
+  --n: clamp(0.875rem, 0.7446rem + 0.6522vi, 1.25rem);
+  --l: clamp(1.05rem, 0.8357rem + 1.0717vi, 1.6663rem);
+  --xl: clamp(1.26rem, 0.9257rem + 1.6715vi, 2.2211rem);
+  --xxl: clamp(1.512rem, 1.0081rem + 2.5196vi, 2.9607rem);
+  --xxxl: clamp(1.8144rem, 1.0727rem + 3.7083vi, 3.9467rem);
+  --main: #b4c540;
+  --aux: #3686c9;
+  --dark: #575a6c;
+  --light: #e0e2d2;
+}
+
+/* Apply to All */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Body */
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: var(--n);
+  line-height: 1.6;
+  background: var(--dark);
+}
+
+/* Headings */
+h1 {
+  font-weight: 800;
+  font-size: var(--xxxl);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: var(--xxl);
+}
+
+h3 {
+  font-weight: 600;
+  font-size: var(--xl);
+}
+
+h4 {
+  font-weight: 500;
+  font-size: var(--l);
+}
+
+/* Images */
+img {
+  display: block;
+  max-width: 100%;
+}
