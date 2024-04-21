@@ -1,0 +1,25 @@
+.avatar {
+  width: 10rem;
+  height: 10rem;
+  margin: auto;
+}
+
+.avatar label {
+  cursor: pointer;
+  position: relative;
+}
+
+.avatar label .avatar-icon {
+  font-size: 10rem;
+  padding: 0.5rem;
+  color: var(--cl);
+  opacity: 0.5;
+}
+
+.avatar label .avatar-icon:hover {
+  opacity: 1;
+}
+
+.avatar input {
+  display: none;
+}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Define your variables */
 :root {
@@ -9,10 +9,11 @@
   --xl: clamp(1.26rem, 0.9257rem + 1.6715vi, 2.2211rem);
   --xxl: clamp(1.512rem, 1.0081rem + 2.5196vi, 2.9607rem);
   --xxxl: clamp(1.8144rem, 1.0727rem + 3.7083vi, 3.9467rem);
-  --main: #b4c540;
-  --aux: #3686c9;
-  --dark: #575a6c;
-  --light: #e0e2d2;
+  --cp: #ace7ff;
+  --cs: #ffc0d3;
+  --ct: #8c8c8c;
+  --cd: #000000;
+  --cl: #ffffff;
 }
 
 /* Apply to All */
@@ -28,11 +29,11 @@
 
 /* Body */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: var(--n);
   line-height: 1.6;
-  background: var(--dark);
+  height: 100vh;
 }
 
 /* Headings */

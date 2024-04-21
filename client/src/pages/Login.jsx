@@ -1,8 +1,9 @@
 import { useState } from "react";
-import styles from "./Login.module.css";
 
-import Card from "../UI/Card";
 import Button from "../UI/Button";
+import UploadAvatar from "../UI/UploadAvatar";
+
+import styles from "./Login.module.css";
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(false);
@@ -19,22 +20,25 @@ const Login = () => {
 
   return (
     <div className={styles.auth}>
-      <Card>
+      <div className={styles["form-container"]}>
         <form onSubmit={isLogin ? loginHandler : signupHandler}>
           <div className={styles["form-controls"]}>
-            <input type="text" placeholder="Username" />
-            <input type="password" placeholder="Password" />
+            {!isLogin && <UploadAvatar />}
+            {!isLogin && <input type="text" placeholder="Name" required autoComplete="off"/>}
+            {!isLogin && <input type="text" placeholder="Bio" required />}
+            <input type="text" placeholder="Username" required />
+            <input type="password" placeholder="Password" required />
           </div>
           <div className={styles["form-actions"]}>
             <Button type="submit">{isLogin ? "Login" : "Signup"}</Button>
-            <Button onClick={() => setIsLogin(!isLogin)}>
+            <Button onClick={() => setIsLogin((prev) => !prev)}>
               {isLogin
                 ? "Don't have Account? Create one."
                 : "Already have an Account? Login."}
             </Button>
           </div>
         </form>
-      </Card>
+      </div>
     </div>
   );
 };
