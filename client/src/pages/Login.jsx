@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Button from "../UI/Button";
-import UploadAvatar from "../UI/UploadAvatar";
+import Button from "../components/UI/Button";
+import UploadAvatar from "../components/UI/UploadAvatar";
 
 import styles from "./Login.module.css";
 import {
