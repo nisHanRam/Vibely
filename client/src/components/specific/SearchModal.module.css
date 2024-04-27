@@ -1,0 +1,32 @@
+.search-form {
+  padding: 0;
+  border-bottom: 1px solid var(--cl);
+  display: flex;
+}
+
+.search-form input,
+.search-form button {
+  opacity: 0.5;
+  border: none;
+}
+
+.search-form input:hover,
+.search-form button:hover,
+.search-form input:focus,
+.search-form button:focus {
+  opacity: 1;
+}
+
+.search-form button {
+  background: transparent;
+  border: none;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.search-form img {
+  filter: invert(100%);
+}

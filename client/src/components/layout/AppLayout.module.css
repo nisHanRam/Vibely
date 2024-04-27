@@ -1,0 +1,58 @@
+.app-layout {
+  background-color: var(--cd);
+  padding: 4px;
+  display: grid;
+  gap: 4px;
+}
+
+.main-content {
+  height: calc(100vh - 4rem - 12px);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 4px;
+}
+
+.main-content > * {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.chat-list {
+  background: var(--cp);
+}
+
+.chat {
+  background: transparent;
+}
+
+.user-profile {
+  background: var(--cs);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .main-content {
+    grid-template-columns: 3fr 5fr 4fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    grid-template-columns: 1fr 2fr 0;
+  }
+
+  .user-profile {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    grid-template-columns: 0 1fr 0;
+  }
+
+  .chat-list,
+  .user-profile {
+    display: none;
+  }
+}

@@ -62,3 +62,36 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 1px solid var(--cl);
+  font-family: inherit;
+  background: transparent;
+  color: inherit;
+}
+
+input::placeholder {
+  color: inherit;
+  opacity: 0.5; /* Fix for Firefox */
+}
+
+input:hover::placeholder {
+  opacity: 1;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:-webkit-autofill {
+  transition: background-color 60000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--cl) !important;
+}
+
+input::-webkit-input-placeholder {
+  color: var(--cl);
+}

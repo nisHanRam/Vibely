@@ -1,5 +1,5 @@
 import styles from "./UploadAvatar.module.css";
-import avatarIcon from "../../assets/avatar.png";
+import avatarIcon from "../../assets/icon_avatar.svg";
 
 const UploadAvatar = ({ onAvatarChange, avatar }) => {
   return (

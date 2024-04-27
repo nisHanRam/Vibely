@@ -1,0 +1,48 @@
+.outer {
+  width: min(480px, 90%);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.outer::before {
+  content: "";
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  width: 50px;
+  height: 50px;
+  background-color: var(--cp);
+  border-radius: 50%;
+  transition: bottom 1s ease-in-out;
+}
+
+.outer:hover::before {
+  bottom: calc(99% - 50px);
+}
+
+.outer::after {
+  content: "";
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 50px;
+  height: 50px;
+  background-color: var(--cs);
+  border-radius: 50%;
+  z-index: -1;
+  transition: top 1s ease-in-out;
+}
+
+.outer:hover::after {
+  top: calc(99% - 50px);
+}
+
+.inner {
+  backdrop-filter: blur(30px);
+  background: rgba(65, 65, 65, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1rem;
+  color: var(--cl);
+}

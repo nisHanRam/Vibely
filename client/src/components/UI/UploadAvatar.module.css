@@ -13,7 +13,7 @@
 }
 
 .avatar label::after {
-  content: url("../../src/assets/camera.svg");
+  content: url("../../src/assets/icon_camera.svg");
   display: grid;
   place-items: center;
   position: absolute;
