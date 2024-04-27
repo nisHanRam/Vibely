@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import styles from "./GlassCard.module.css";
 
 const GlassCard = (WrappedComponent) => {

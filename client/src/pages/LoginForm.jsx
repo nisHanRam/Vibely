@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 import Button from "../components/UI/Button";
 import UploadAvatar from "../components/UI/UploadAvatar";
@@ -117,6 +118,10 @@ const LoginForm = ({ className }) => {
       </div>
     </form>
   );
+};
+
+LoginForm.propTypes = {
+  className: PropTypes.string,
 };
 
 export default GlassCard(LoginForm);
