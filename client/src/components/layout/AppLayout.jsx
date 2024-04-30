@@ -1,7 +1,9 @@
+/* eslint-disable react/display-name */
 import Title from "../shared/Title";
 import Header from "./Header";
-
+import { DUMMY_CHAT_LIST } from "../../constants";
 import styles from "./AppLayout.module.css";
+import ChatList from "../specific/ChatList";
 
 const AppLayout = (WrappedComponent) => {
   return (props) => (
@@ -9,11 +11,13 @@ const AppLayout = (WrappedComponent) => {
       <Title />
       <Header />
       <div className={styles["main-content"]}>
-        <div className={styles["chat-list"]}>Chat List</div>
-        <div className={styles["chat"]}>
+        <div>
+          <ChatList chats={DUMMY_CHAT_LIST} />
+        </div>
+        <div>
           <WrappedComponent {...props} />
         </div>
-        <div className={styles["user-profile"]}>User Profile</div>
+        <div>User Profile</div>
       </div>
     </div>
   );

@@ -1,0 +1,34 @@
+.chat-item {
+  cursor: pointer;
+}
+
+.chat-item__link {
+  padding: 4px;
+  display: grid;
+  grid-template-columns: 1.5fr 8.5fr;
+  gap: var(--n);
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.chat-item__link:hover {
+  opacity: 1;
+}
+
+.chat-item__link > div {
+  display: grid;
+  align-items: center;
+}
+
+.chat-item img {
+  padding: 4px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.chat-item__status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

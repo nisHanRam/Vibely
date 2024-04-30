@@ -12,7 +12,7 @@ nav {
   border-radius: 4px;
   height: 100%;
   width: 100%;
-  padding: 0 var(--s);
+  padding: 0 var(--n);
   display: flex;
   justify-content: space-between;
 }
@@ -22,7 +22,7 @@ nav .brand {
   align-items: center;
 }
 
-nav h3 {
+nav h1 {
   display: block;
 }
 
@@ -40,12 +40,12 @@ nav ul {
 
 nav img {
   filter: invert(100%);
-  height: var(--xl);
+  height: var(--xxl);
   cursor: pointer;
 }
 
 @media (max-width: 600px) {
-  nav h3 {
+  nav h1 {
     display: none;
   }
   nav .menu {

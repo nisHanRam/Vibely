@@ -17,16 +17,8 @@
   border-radius: 4px;
 }
 
-.chat-list {
-  background: var(--cp);
-}
-
-.chat {
-  background: transparent;
-}
-
-.user-profile {
-  background: var(--cs);
+.main-content > div:nth-child(1) {
+  overflow-y: scroll;
 }
 
 /* Media Queries */
@@ -41,7 +33,7 @@
     grid-template-columns: 1fr 2fr 0;
   }
 
-  .user-profile {
+  .main-content > div:nth-child(3) {
     display: none;
   }
 }
@@ -51,8 +43,8 @@
     grid-template-columns: 0 1fr 0;
   }
 
-  .chat-list,
-  .user-profile {
+  .main-content > div:nth-child(1),
+  .main-content > div:nth-child(3) {
     display: none;
   }
 }

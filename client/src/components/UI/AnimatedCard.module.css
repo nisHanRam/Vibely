@@ -1,0 +1,70 @@
+.card {
+  display: grid;
+  place-items: center;
+  color: white;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(0deg, var(--cp), var(--cs));
+  background: var(--cl);
+  opacity: 0.25;
+}
+
+.wide-card::before {
+  width: 180%;
+  height: 80%;
+  transform: rotate(-6deg);
+}
+
+.wide-card:hover::before {
+  animation: animate-wide 1s ease-in-out 1;
+}
+
+@keyframes animate-wide {
+  from {
+    transform: rotate(-6deg);
+  }
+  to {
+    transform: rotate(174deg);
+  }
+}
+
+.tall-card::before {
+  width: 50%;
+  height: 180%;
+  transform: rotate(45deg);
+}
+
+.tall-card:hover::before {
+  animation: animate-tall 2s ease-in-out 1;
+}
+
+@keyframes animate-tall {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(225deg);
+  }
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 4px;
+  background: var(--cd);
+}
+
+.card > * {
+  z-index: 1;
+  background: rgba(65, 65, 65, 0.3);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}

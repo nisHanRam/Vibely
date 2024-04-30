@@ -49,7 +49,7 @@ const Header = () => {
     <header>
       <nav>
         <div className={styles.brand}>
-          <h3>Vibely</h3>
+          <h1>Vibely</h1>
           <RxHamburgerMenu onClick={handleMobile} className={styles.menu} />
         </div>
         <ul>

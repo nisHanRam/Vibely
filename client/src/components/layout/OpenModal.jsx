@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
+import PropTypes from "prop-types";
 
 const Backdrop = lazy(() => import("../UI/Backdrop"));
 const Spinner = lazy(() => import("../UI/Spinner"));
@@ -34,6 +35,11 @@ const OpenModal = ({ toggleModal, modalType }) => {
       )}
     </React.Fragment>
   );
+};
+
+OpenModal.propTypes = {
+  toggleModal: PropTypes.func,
+  modalType: PropTypes.string,
 };
 
 export default OpenModal;
